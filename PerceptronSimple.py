@@ -29,7 +29,7 @@ class PerceptronSimple:
 #Ciclo principal
 if __name__ == "__main__":
     #Leer archivo Excel
-    archivo_excel = pd.read_excel('Recursos/CompuertaXOR.xlsx')
+    archivo_excel = pd.read_excel('Recursos/CompuertaAND.xlsx')
     #Extraer solo las columnas X1, X2, X3, X4
     X = archivo_excel[["X1", "X2", "X3", "X4"]].values
     Y = archivo_excel["d"].values
