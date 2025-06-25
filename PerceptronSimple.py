@@ -20,10 +20,8 @@ class PerceptronSimple:
             for xi,target in zip(x,y):
                 output = self.predict(xi)
                 error = target - output
-                print(self.weights[0])
-                self.weights[1:] += self.lr * error * xi
-                self.weights[0] += self.lr * error
-                print(self.weights[0])
+                self.weights[1:] += self.lr * error * xi # Ajuste de pesos de las entradas
+                self.weights[0] += self.lr * error #Ajuste del bias o sesgo
                 print(f"  Entrada: {xi}, Esperado: {target}, Predicho: {output}, Error: {error}")
 
 #Ciclo principal
@@ -35,12 +33,12 @@ if __name__ == "__main__":
     Y = archivo_excel["d"].values
 
     #Crear y entrenar el Perceptron
-    perceptronXOR = PerceptronSimple(4,0.001,15)
-    perceptronXOR.train(X,Y)
+    perceptronAND = PerceptronSimple(4, 0.001, 15)
+    perceptronAND.train(X, Y)
 
 # Pruebas
 print("\nPruebas finales:")
 for xi in X:
-    print(f"Entrada: {xi}, Predicción: {perceptronXOR.predict(xi)}")
+    print(f"Entrada: {xi}, Predicción: {perceptronAND.predict(xi)}")
 
 

@@ -9,7 +9,7 @@ def sigmoid_derivative(x):
     return x * (1 - x)
 
 #Leer archivo Excel
-archivo_excel = pd.read_excel('Recursos/CompuertaXOR.xlsx')
+archivo_excel = pd.read_excel('Recursos/CompuertaXOR.xlsx') 
 #Extraer solo las columnas X1, X2, X3, X4
 X = archivo_excel[["X1", "X2", "X3", "X4"]].values
 y = archivo_excel[["d"]].values
@@ -20,7 +20,7 @@ input_size = 4
 hidden_size = 8
 output_size = 1
 learning_rate = 0.5
-epochs = 10000
+epochs = 1000
 
 # Pesos y sesgos
 weights_input_hidden = np.random.uniform(-1, 1, (input_size, hidden_size))
