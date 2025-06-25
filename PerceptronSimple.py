@@ -33,7 +33,7 @@ if __name__ == "__main__":
     Y = archivo_excel["d"].values
 
     #Crear y entrenar el Perceptron
-    perceptronAND = PerceptronSimple(4, 0.001, 15)
+    perceptronAND = PerceptronSimple(4, 0.1, 15)
     perceptronAND.train(X, Y)
 
 # Pruebas

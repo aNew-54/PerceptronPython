@@ -20,7 +20,7 @@ input_size = 4
 hidden_size = 8
 output_size = 1
 learning_rate = 0.5
-epochs = 1000
+epochs = 10000
 
 # Pesos y sesgos
 weights_input_hidden = np.random.uniform(-1, 1, (input_size, hidden_size))
